@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <style>
+ /*------------Descedent Combinator (space)-------------
+
+        div p {
+            background-color: yellow;
+        }
+        
+ /*------------Child Combinator (>)-------------
+
+        .a>p {
+            background-color: orange;
+        }
+
+        .b>p {
+            background-color: lightblue;
+        }
+
+ /*------------Adjacent Siblingh Combinator (+)-------------
+
+        h1 + p {
+            background-color: green;
+        }*/
+
+ /*------------General Sibling Combinator (~)-------------*/
+
+       h1~p {
+        background-color: blue;
+       }
+        
+    </style>
+</head>
+<body>
+
+<div class="a">
+    container
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <div class="b">
+        <p>new paragraph</p>
+    </div>
+    <p>Paragraph 3</p>
+</div>
+
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <p>Paragraph 6</p>
+
+
+<h1>First heading</h1>
+
+    <p>Paragraph 7</p>
+    <p>Paragraph 8</p>
+    <p>Paragraph 9</p>
+
+<h2>Second heading</h2>
+
+    <p>Paragraph 10</p>
+    <p>Paragraph 11</p>
+    <p>Paragraph 12</p>
+
+</body>
+</html>
