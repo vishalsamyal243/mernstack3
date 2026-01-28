@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        
+        img{
+            height: 80px;
+            width: 80px;
+        }
+   /* <!--------------Attribute[attribute]--------------->
+
+     img[alt]{border: 5px solid blue;} 
+       a[href]{color: red; font-size: 20px;}
+
+    <!-----------Attribute[attribute="value"]---------->
+
+    img[alt="img2"]{border: 5px solid blue;}
+    a[target="self"]{color: red; font-size: 20px;}
+
+    -----------Attribute[attribute^="value"]------------(starting value dekhta hai)
+
+     img[alt^="img"]{border: 6px solid blue;}
+     a[target^="self"]{color: red; font-size: 20px;}*/
+
+    /*-----------Attribute[attribute*=value]-------------(start middle end sb value dekhta hai bs attribute name ke andr wo word hona chahiye)
+
+    img[alt*="m"]{border: 6px solid blue;}
+    a[target*="l"]{color: red; font-size: 20px;}*/
+
+    /*-----------Attribute[attribute$="value"]------------(jo value define ki hai wo value agr kisi b attribute ki value ke end se match krti hai to css wprk krega)
+
+    img[alt$="1"]{border: 6px solid blue;}
+    a[target$="f"]{color: red; font-size: 20px;}*/
+
+    /*-----------Attribute[attribute~="value"]------------(jo value di hai common ho and uske agge piche space ho alg ho akela to css work krega)
+
+    img[alt~="2"]{border: 6px solid blue;}
+    a[target~="f"]{color: red; font-size: 20px;}*/
+
+    /*-----------Attribute[attribute|="value"]-----------)(jo value di hai wo value agr attribute ki value ke start me ho or uske agge hyphen(-) ho to css work krega)*/
+
+    img[alt|="h"]{border: 6px solid blue;}
+    a[target|="h"]{color: red; font-size: 20px;}
+
+   
+
+    </style>
+</head>
+<body>
+    <img src="https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?semt=ais_hybrid&w=740&q=80" alt="img1">
+    <img src="https://cdn.pixabay.com/photo/2020/11/01/03/08/youtube-5702765_1280.jpg" alt="img 2">
+    <a href="https://www.youtube.com/" target="h-2">youtube</a>
+    <a href="https://www.instagram.com/" target="h-1">Instagram</a>
+    
+     <button type="submit">submit</button>
+    <button type="submit">submit</button>
+
+
+</body>
+</html>
