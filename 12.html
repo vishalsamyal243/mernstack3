@@ -5,20 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       /* .container{
-           background: linear-gradient(to left,red,yellowgreen);
-           height: 100vh;
-           width: 100vw;
-        }*/
+       .container{
+        /*background: linear-gradient(red,yellow);
+        background: linear-gradient(to right,red,yellow);
+        background: linear-gradient(to left,red,yellow);
+        background: linear-gradient(to top,red,yellow);
+        background: linear-gradient(to bottom,red,yellow);
+        background: linear-gradient(to top right,red,yellow);
+        background: linear-gradient(to bottom right,red,yellow);
+        background: linear-gradient(to top left,red,yellow);
+        background: linear-gradient(to bottom left,red,yellow);
+
+        background: linear-gradient(10deg,red,yellow);  also use degree*/
+
+        /*---------------Repeated Gradient---------------*/
+
+       /* background: repeating-linear-gradient(red,yellow 10%,green 20%);*/
+        height: 100vh;
+        width: 100vw;
+        }
 
         .container{
             height: 100vh;
             width: 100vw;
-            background: radial-gradient(circle at top left, red,green,yellow,blue);
+           /* background: radial-gradient(red,green,yellow,blue);
+            background: radial-gradient(red 5%,green 15%,yellow 60%);
+            background: radial-gradient(circle,red,green,yellow,blue);
+            background: radial-gradient(closest-side at 90% 20%, red,yellow,green);
+            background: radial-gradient(farthest-side at 50% 70%, red,yellow,green);
+            background: radial-gradient(closest-corner at 10% 10%, red,yellow,green);
+            background: radial-gradient(farthest-corner at 5% 5%, red,yellow,green);*/
+        /*-----------------Repeated Gradient----------------*/
+
+            background: repeating-radial-gradient(red,yellow 50px,green 100px);
+
         }
+
     </style>
 </head>
 <body>
-    <div class="container">hello coder roots</div>
+    <div class="container"> hello coder roots</div>
 </body>
 </html>
