@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout using flexbox</title>
+    <style>
+    *{
+            margin: 0;
+    }
+    
+   
+
+    header{
+        background-color:  #f39d9d;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+     }
+
+    .main{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+    
+
+    .left{
+        display: flex;
+        flex-direction: column;
+    }
+
+   .container1 ul{
+    margin-top: 10px;
+   }
+
+   li{
+    margin-bottom: 9px;
+   }
+    .container1{
+        background-color: #E6E6E6;
+        height: 210px;
+        width: 200px;
+        padding: 20px;
+
+    }
+
+    .container2 p{
+     padding: 4px;
+     margin-top: 2px;
+    }
+
+    .container2{
+        background-color: #edd5d5;
+        height: 210px;
+        width: 200px;
+        padding: 20px;
+    }
+
+    
+
+    .container3{
+        min-height: 500px;
+        flex: 3;
+        background-image: url("https://gyaanarth.com/wp-content/uploads/2022/07/beant-college-of-engineering-and-technology-bcet-gurdaspur.jpg");
+        background-size: cover;
+        
+    }
+
+    .container1 a {
+    text-decoration: none; 
+    color: black;            
+    font-weight: bold;       
+}
+
+.container1 a:hover {
+    color:  #c22323;  
+}
+
+    footer{
+        background-color: #f39d9d;
+        height: 80px;
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+     }
+     
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SBSSU – Sardar Beant Singh State University</h1>
+    </header>
+    <div class="main">
+    <div class="left">
+        <div class="container1">
+            <h2>Menu</h2>
+            <nav>
+                <ul>
+            <li><a href="https://www.sbssugsp.ac.in/#/">Home</a></li>
+            <li><a href="https://www.sbssugsp.ac.in/#/placements">Placements</a></li>
+            <li><a href="https://www.sbssugsp.ac.in/#/DeptComputerScienceEng">Academics</a></li>
+            <li><a href="https://www.sbssugsp.ac.in/#/BtechCSE">Admissions</a></li>
+             <li><a href="https://www.sbssugsp.ac.in/assets/pdf/telephone-directory.pdf">Staff</a></li>    
+             </ul>
+            </nav>
+        </div>
+        <div class="container2">
+            <h2>Contact Us</h2>
+            <p>Sardar Beant Singh State University (SBSSU)</p>
+            <p> Email: 
+                <a href="https://mail.google.com/mail/?view=cm&to=info@sbssu.ac.in">info@sbssu.ac.in</a>
+            </p>             
+            <p>Phone: +91 12345 67890</p>
+            <p>Address: Punjab, India</p>
+        </div>
+        </div>
+        <div class="container3"></div>
+       
+        </div>
+        <footer>
+            <p>© 2026 SBSSU | All Rights Reserved</p>
+        </footer>
+  
+</body>
+</html>
