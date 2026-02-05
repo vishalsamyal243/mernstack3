@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonalika - Guru Kirpa Tractors</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: rgb(53, 51, 51);
+    }
+
+    header{
+        min-height: 80px;
+        background: rgb(27, 57, 148);
+        color: rgb(249, 247, 247);
+        padding: 20px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header h1{
+        font-size: 24px;
+    }
+
+    nav a{
+        background-color: rgb(20, 16, 16);
+        color: white;
+        padding: 10px;
+        font-weight:bold;
+        text-decoration: none;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    nav a:hover{
+        color:rgb(106, 183, 238);
+    }
+
+    .hero{
+        height: 442px;  
+        background-color: rgb(244, 242, 240);
+        padding: 60px 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-text{
+        margin-top: -50px;
+        max-width: 500px;
+    }
+    .hero-text h2{
+        font-size: 36px;
+    }
+
+    .hero-text p{
+        margin-top: 25px;
+    }
+
+    .hero img{
+        height: 350px;
+        width: 500px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin: 0px;
+    }
+
+    .btn{
+        display: inline-block;
+        background-color: rgb(243, 164, 61);
+        color: white;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-bottom: 2px solid yellow;
+    }
+
+    .btn:hover{
+        background-color: #d9961f;
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    section h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    section{
+        scroll-margin-top: 100px;
+    }
+    .feat{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feat1{
+        width: 250px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        transition:0.3s;
+        border-bottom: 2px solid rgb(54, 51, 51);
+    }
+
+    .feat1 h3{
+        margin-bottom: 15px;
+    }
+
+    .feat1:hover{
+       transform:translateY(-10px);
+       box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .pri{
+    margin-top: 120px;
+    }
+
+    .price{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .price1{
+        width: 250px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s;
+        border: 2px solid black;
+        border-bottom: 2px solid rgb(64, 62, 62);
+    }
+
+    .price2{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .price a{
+    display: inline-block;   
+    margin-top: 20px;
+    text-decoration: none;
+    background: rgb(243, 164, 61);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    }
+
+    .price a:hover{
+        background-color: #d9961f;
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1)
+    }
+
+    footer{
+         background:rgb(27, 57, 148);
+         color:white;
+         text-align:center;
+         padding:20px;
+         margin-top: 20px;
+    }
+    
+    footer a{
+        color: white;
+        text-decoration: none;
+    }
+
+    footer a:hover{
+        color: rgb(106, 183, 238);
+    }
+
+    @media(max-width:768px){
+  header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  .hero{
+    text-align:center;
+  }
+
+  .hero-text{
+    margin-bottom:30px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sonalika - Guru Kirpa Tractors</h1>
+        <nav>
+        <a href="#feature">Features</a>
+        <a href="#pricing">Pricing</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Powerful Tractors for Modern Farming</h2>
+            <p>Reliable, fuel-efficient tractors designed to increase productivity.</p>
+            <a href="#pricing" class="btn" target="_blank">Book a Demo</a>
+        </div>
+        <img src="https://cdn.tractorsdekho.com/in/sonalika/di-750-iii/sonalika-di-750-iii-62736.jpg">
+    </div>
+
+    <section id="feature">
+    <h2>Our Features</h2>
+    <div class="feat">
+        <div class="feat1">
+            <h3>High Power</h3>
+            <p>Strong engines for heavy farming work.</p>
+        </div>
+        <div class="feat1">
+            <h3>Fuel Efficient</h3>
+            <p>Advanced technology to save fuel.</p>
+        </div>
+        <div class="feat1">
+            <h3>Easy Maintenance</h3>
+            <p>Low service cost and easy spare parts.</p>
+        </div>
+        <div class="feat1">
+            <h3>Warranty</h3>
+            <p>Up to 5 years warranty support.</p>
+        </div>
+    </div>
+    </section>
+
+    <section id="pricing">
+            <h2 class="pri">Pricing Plans</h2>
+            <div class="price">
+            <div class="price1">
+                <h3>Basic Model</h3>
+                <div class="price2">₹5.31-5.62 Lakh</div>
+                <a href="https://www.tractorjunction.com/sonalika-tractor/di-35/" target="_blank">Buy Now</a>
+            </div>
+            <div class="price1">
+                <h3>Standard Model</h3>
+                <div class="price2">₹7.62-8.42 Lakh</div>
+                <a href="https://www.tractorjunction.com/sonalika-tractor/di-60/" target="_blank">Buy Now</a>
+            </div>
+            <div class="price1">
+                <h3>Premium Model</h3>
+                <div class="price2">₹8.15-8.51 Lakh</div>
+                <a href="https://www.tractorjunction.com/sonalika-tractor/di-750-iii-4wd/" target="_blank">Buy Now</a>
+            </div>
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sonalika - Guru Kirpa Tractors</p>
+        <a href="https://www.instagram.com/guru.kirpatractors/" target="_blank">Instagram | </a>
+        <a href="https://www.youtube.com/c/SonalikaTractorsIndia" target="_blank">Youtube | </a>
+        <a href="https://www.facebook.com/SonalikaTractorsOfficial/" target="_blank">Facebook</a>
+    </footer>
+</body>
+</html>

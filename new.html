@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenField Tractor Agency</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height:1.6;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#1b3a1b;
+  color:white;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+header h1{
+  font-size:24px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:#f9b233;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:60px 40px;
+  background:#f2f2f2;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  max-width:500px;
+}
+
+.hero-text h2{
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.hero-text p{
+  margin-bottom:25px;
+}
+
+.hero-text button{
+  padding:12px 25px;
+  font-size:16px;
+  background:#f9b233;
+  border:none;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.hero-text button:hover{
+  background:#d9961f;
+  transform:scale(1.05);
+}
+
+.hero img{
+  width:400px;
+  max-width:100%;
+}
+
+/* SECTIONS */
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+/* FEATURES */
+.features{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.feature-card{
+  background:white;
+  padding:25px;
+  width:250px;
+  border-radius:8px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.feature-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.feature-card h3{
+  margin-bottom:15px;
+}
+
+/* PRICING */
+.pricing{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.price-card{
+  border:2px solid #1b3a1b;
+  padding:30px;
+  width:250px;
+  border-radius:8px;
+  text-align:center;
+}
+
+.price-card h3{
+  margin-bottom:15px;
+}
+
+.price{
+  font-size:28px;
+  margin-bottom:20px;
+  color:#1b3a1b;
+}
+
+.price-card button{
+  padding:10px 20px;
+  border:none;
+  background:#1b3a1b;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.price-card button:hover{
+  background:#2f5d2f;
+}
+
+/* CONTACT */
+.contact-container{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.contact-info{
+  max-width:400px;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  width:300px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  font-size:14px;
+}
+
+.contact-form button{
+  padding:10px;
+  background:#1b3a1b;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  background:#2f5d2f;
+}
+
+/* FOOTER */
+footer{
+  background:#1b3a1b;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  .hero{
+    text-align:center;
+  }
+
+  .hero-text{
+    margin-bottom:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>GreenField Tractor Agency</h1>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h2>Powerful Tractors for Modern Farming</h2>
+    <p>Reliable, fuel-efficient tractors designed to increase productivity.</p>
+    <button>Book a Demo</button>
+  </div>
+  <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Tractor">
+</div>
+
+<!-- FEATURES -->
+<section id="features">
+  <h2>Our Features</h2>
+  <div class="features">
+    <div class="feature-card">
+      <h3>High Power</h3>
+      <p>Strong engines for heavy farming work.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Fuel Efficient</h3>
+      <p>Advanced technology to save fuel.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Easy Maintenance</h3>
+      <p>Low service cost and easy spare parts.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Warranty</h3>
+      <p>Up to 5 years warranty support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Pricing Plans</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Basic Model</h3>
+      <div class="price">₹5,50,000</div>
+      <button>Buy Now</button>
+    </div>
+    <div class="price-card">
+      <h3>Standard Model</h3>
+      <div class="price">₹7,20,000</div>
+      <button>Buy Now</button>
+    </div>
+    <div class="price-card">
+      <h3>Premium Model</h3>
+      <div class="price">₹9,80,000</div>
+      <button>Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <p><strong>📍 Address:</strong> NH-44, Haryana</p>
+      <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+      <p><strong>📧 Email:</strong> greenfieldtractors@gmail.com</p>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 GreenField Tractor Agency</p>
+  <p>Facebook | Instagram | Twitter</p>
+</footer>
+
+</body>
+</html>
