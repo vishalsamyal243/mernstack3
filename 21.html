@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+      
+
+        }
+
+        .container{
+            margin-left: 300px;
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            position: relative;
+            /* animation-name: code;
+            animation-duration: 2s;
+            animation-delay: 0s; */
+            /* animation-iteration-count: infinite; */
+            /* animation-fill-mode: both; */
+            /* animation-direction:reverse; */
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            /* animation-direction: alternate-reverse; */
+            animation-timing-function: linear;
+        }
+
+        /* @keyframes code{
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 500px;
+                left: 1000px;
+            }
+        } */
+     @keyframes move{
+        0%{
+            top: 0;
+            left: 0;
+        }
+        20%{
+            top: 450px;
+            left: 30px;
+        }30%{
+            top: 0px;
+            left: 60px;
+        }40%{
+            top:450px;
+            left: 90px;
+        }50%{
+            top: 0;
+            left: 120px;
+        }
+        60%{
+            top:450px;
+            left: 150px;
+        }70%{
+            top: 0;
+            left: 180px;
+        }80%{
+            top:450px;
+            left: 210px;
+        }90%{
+            top: 0;
+            left: 240px;
+        }100%{
+            top:450px;
+            left: 270px;
+        }
+     }
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
