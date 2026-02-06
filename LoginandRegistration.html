@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-image: url("https://cdn4.singleinterface.com/files/enterprise/coverphoto/148632/GMB-Banner-1134X419-JEETNE-KA-DAM-10-1-2026-1-12-01-26-12-52-25.jpg");
+            background-size:1400px 600px;
+            display: flex;
+            justify-content: center;
+            background-repeat: no-repeat;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        } 
+
+        .container{
+            height: 560px;
+            width: 400px;
+            background-color: white;
+            border-radius: 20px;
+            margin-left: 100px;
+            margin-top: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 15px rgba(63, 143, 193, 0.5);
+            text-shadow: 1px 5px 10px rgb(42, 112, 166) ;
+           
+        }
+
+        .container h1{
+            font-size: 35px;
+            color:#0B4F8A;
+        }
+
+        input[type="radio"]{
+        display:none;
+        }
+
+       .tabs{
+        display: flex;
+        margin-top: 20px;
+       }
+
+       .tabs label{
+        flex: 1;
+        text-align: center;
+        padding:10px;
+        cursor: pointer;
+        background-color: #E5EEF7;
+        color:  #0B4F8A;
+       }
+
+       #login:checked ~ .tabs label[for="login"],
+       #register:checked ~ .tabs label[for="register"]{
+        background-color: #0B4F8A;
+        color: #FFFFFF;
+       }
+
+       .forms{
+         position:relative;
+        width: 100%;
+        margin-top: 50px;
+        height:400px ;
+        overflow:hidden;
+       }
+
+       form{
+        position:absolute;
+       top:0;
+       left:0;
+       width:100%;
+       display:flex;
+       flex-direction:column;
+      gap:14px;
+      transition:transform 0.45s ease-in-out;
+       }
+
+       form input{
+    padding:11px 12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    outline:none;
+    font-size:14px;
+    transition:0.25s;
+    
+}
+
+form input:focus{
+    border-color:#1f5945;
+    box-shadow:0 0 0 2px rgba(79,70,229,.15);
+    
+}
+
+
+form button{
+    padding:11px;
+    border:none;
+    border-radius:6px;
+    background:#226536;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+
+form button:hover{
+    background:#1e2067;
+}
+
+
+.login-form{
+    transform:translateX(0);
+    
+}
+
+.register-form{
+    transform:translateX(110%);
+}
+
+#register:checked ~ .forms .login-form{
+    transform:translateX(-110%);
+}
+
+#register:checked ~ .forms .register-form{
+    transform:translateX(0);
+}
+
+#login:checked ~ .forms .login-form{
+    transform:translateX(0);
+}
+
+#login:checked ~ .forms .register-form{
+    transform:translateX(110%);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center">Sonalika - Guru Kirpa Tractors</h1>
+
+    <input type="radio" name="tab" id="login" checked>
+    <input type="radio" name="tab" id="register">
+
+    <div class="tabs">
+         <label for="login">LOGIN</label>
+         <label for="register">REGISTER</label>
+    </div>
+
+    <div class="forms">
+        <form class="Login-form">
+         <input type="email" placeholder="Enter your Email" required>
+         <input type="password" placeholder="Enter your Password" required>   
+         <button type="button" onclick="window.open('Product.html','_blank')">LOGIN</button>
+        </form>
+
+        <form class="register-form">
+        <input type="name" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your Email" required>
+        <input type="password" placeholder="Enter your Password" required>
+        <input type="password" placeholder="Enter your Confirm Password" required>
+         <button type="button" onclick="window.open('Product.html','_blank')">LOGIN</button>
+        </form>
+
+    </div>
+    </div>
+</body>
+</html>
