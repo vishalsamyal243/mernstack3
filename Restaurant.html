@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <style>
+
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+         font-family:Arial, Helvetica, sans-serif;
+     }
+
+     body{
+        line-height: 1.6;
+     }
+
+     header{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color:rgb(44, 42, 42);
+     }
+
+     .logo{
+        font-size: 26px;
+        font-weight: bold;
+        color:rgb(231, 204, 57);
+     }
+     
+     .navbar{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+     }
+
+     .menu-link{
+        display: flex;
+        gap: 20px;
+        
+     }
+
+     .menu-link a{
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+     }
+
+     .menu-link a:hover{
+        color: rgb(231, 204, 57);
+     }
+
+     .homes{
+        height: 90vh;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://lh3.googleusercontent.com/p/AF1QipPKH_yXsoFywIQS9QWe41Dw02kDjituujc_Mmfv=s1360-w1360-h1020-rw");   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(255, 255, 255);
+     }
+
+     .homes h1{
+        font-size: 48px;
+        margin-bottom: 10px;
+     }
+
+     .title{
+        font-size: 32px;
+        font-weight: bold;
+        color: rgb(184, 24, 24);
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    
+     }
+
+     .container{
+        display: grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap: 25px;
+        border-radius: 10px;
+        padding: 30px;
+     }
+
+     .menu-card{
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(113, 12, 12, 0.1);
+        margin-top: 15px;
+        transition : 0.3s;
+     }
+
+     .menu-card:hover{
+        box-shadow: 0 8px 15px rgba(130, 16, 16, 0.5);
+        transform: translateY(-5px);
+     }
+
+     .menu-card img{
+        height: 200px;
+        width: 100%;
+     }
+
+     .content{
+        margin-top: 10px;
+        padding: 15px;
+     }
+
+     .content p{
+         color: rgb(184, 24, 24);
+         font-weight: bold;
+     }
+     
+     section{
+        scroll-margin-top: 74px;
+     }
+
+     .about{
+        height: 250px;
+        margin-top: 30px;
+        background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)),
+        url('https://lh3.googleusercontent.com/gps-cs-s/AHVAweo5HRMGlkvl2WS4jGCm7CV5mkZVYXQdEo33jdTYJlqa6PfsRjZqNKMUU706RgOXA9ZRoX6mQ6LsgMcoe_ZcWPgmoW8Lr2qDrhMQHi_A5G1f25yrtEGqrNI6rX5ATq0sKixkt_SuPlncoNp6=s1360-w1360-h1020-rw')center/cover no-repeat;   
+     }
+     
+     .about-us h2{
+        padding-top: 60px;
+        font-size: 32px;
+        font-weight: bold;
+        color: rgb(184, 24, 24);
+        display: flex;
+        justify-content: center;
+     }
+
+     .about-content p{
+      color:rgb(48, 47, 46);
+      margin-top: 30px;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+     }
+
+     .cont{
+        background-color: rgb(44, 42, 42);
+     }
+
+     .cont h2{
+        padding: 60px;
+        padding-bottom: 40px;
+        text-align: center;
+        font-size: 32px;
+        color: rgb(231, 204, 57); 
+     }
+
+     .contact-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        color: white;
+        padding-bottom: 40px;
+     }
+
+     .contact-info a{
+        color: white;
+        text-decoration: none;
+     }
+
+     .contact-info a:hover{
+        color: rgb(231, 204, 57);
+     }
+
+     footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: black;
+        color: #aaa;
+     }
+
+     .homes button{
+        height: 40px;
+        width: 140px;
+        background-color: rgb(193, 168, 26);
+        margin-top: 30px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 0 15px 25px rgba(81, 48, 14, 0.5);
+        transition: 0.3s
+     }
+
+     .homes button:hover{
+        background-color: rgb(231, 204, 57);
+        transform: scale(1.08);
+        box-shadow: 0 15px 20px rgba(154, 120, 40, 0.9);
+     }
+
+      @media (max-width: 768px) {
+      .home h1 {
+        font-size: 36px;
+      }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+        <div class="logo">Haveli</div>
+        <div class="menu-link">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="homes">
+            <h1>A Royal Taste of Punjab</h1>
+            <p>Where tradition, flavor, and warmth come together</p>
+            <button type="button" onclick="window.open('https://www.tripadvisor.in/Restaurant_Review-g488276-d1108222-Reviews-Haveli-Jalandhar_Jalandhar_District_Punjab.html','_blank')">Explore More</button>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="title">Our Menu</div>
+    <div class="container">
+        
+    <div class="menu-card">
+        <img src="https://spicecravings.com/wp-content/uploads/2020/12/Paneer-kathi-Roll-Featured-1.jpg">
+    <div class="content">
+    <h3>Paneer Kathi Roll</h3>
+    <p>₹165</p>
+    </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_BD5yP1qSVcWKnH2Oa-Se1nwcDFgKCeGvdg&s">
+    <div class="content">
+    <h3>Amritsari Kulcha</h3>
+    <p>₹170</p>
+    </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://yt3.ggpht.com/VLDHHQzajroYHxaJr88RbBYtpCTsX36lG21PJhVOJiy1r9NJQfr19XQaLVz1gSBqLsi-Vhp_GzZ_RQ=s368-c-fcrop64=1,37fa0000c80cffff-nd-v1-rwa">
+    <div class="content">
+    <h3>Rasmalai</h3>
+    <p>₹65</p>
+    </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUTERIVFhUVFRYVFhcXFRUVFRYVFRUWFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQFy0lHSUtLS0tLS0tLS0tLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tN//AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xAA8EAABAwIEBAQEBAUDBAMAAAABAAIRAyEEBRIxBkFRYSJxgZETMqGxQsHR8AcUI1JiFXLhksLS8UOCsv/EABkBAAMBAQEAAAAAAAAAAAAAAAECAwAEBf/EACQRAAMBAAIDAAICAwEAAAAAAAABAhEDIRIxQQRREyJhgfAU/9oADAMBAAIRAxEAPwDLMUzHKuxTsXIjsLFN6nD1UCmpp0xWi1ScrdNyqUgrtEKkiMIYQotRKD0Xwr9HEKiYjQSaVI2kquHerraiYUmp0grDBCqh6jxWIIaVtMlpkOP8+LBoYblYrhKn8TEanXhXeLWue8k8yiPCOTubDgN15/JbptndUqISPRsPi9LQGqZmZx8yiwmXOISrZY5JP8ns5XgRw2ZtPJOqZj2XMvwbWi6tuw7D0XUlTXsnqBGNzWBA3VHC5Sa51VBZH/8ASWTKu0qenZBcTb2g+WejzriXgkRqpi6q8KVH0TofK9QewEXWGzmiG1xpTvjSpUiscracs0VOtKfrQ6i+AFYbVXUiBZ1pSqhqLpqrGLJeFwvCqly4Chpi4CFwEKqHrhqIaYmqtCihVqtUpNrlAJM9Mc5NdUUepYwiUlCSkgE8xYFIE1jFM1i4UzqGKWnKeKalZSTIGjqav4UKqxis0DCpIjCGlSUmqux8qxTeqiBPCq8ChNCsQrZrWTkytmWcNp7lRZdmgrghqwXGbqhqQ0FH+AsE+myX81GfJ299F6cqVnsWa4LVU0nqtnw9gg1oss/nuFLjqZuEzI+Mm0j8OuC0i08lK58Wyjr+SUel4elZWgwc1mGcVUnCWuCq4jiUus1Zc0yuzn/jpv0a6rh2uCpuwhHNBcFmrnQJRym60lyaeSbFctEtNpCdqKG4vPaFKddRojqQsBxP/FSm0FmGGt20/h91TyWGUNm34k4jpYamS5wnkOZKzGRB+Ica9TnsOgWBymjXx1YVa5JEyByHovTcGfhtDRsnjvthrJ6QQbTUgICp1MSmsryqCF1xXHqFj097gsY5KlBVY1AFGcQEAl8gQh9fHsaYJCbXxHhIlZHG5Q6pU1aj7rBWfTaCHCQmFiG5a8sbBKul881sAPq7KNjkw1E6ndAw1zkl0sSW0OGBZTT9MLoTtK4MOk6xTtao2iE9pTIw8MUrWJjVI1108sSkTU2FWqdNRU3qxTerJk2idgKs0pQjGZo2luhVTiqDYE+QS1zSng88La00lbKmuOohXsLRDRAQbJs7+KNiEW/mR1VU01pOljw7XpLLcSZSyo0mLo9icfAWTzbNt0Wk12BNp9GQxDqtE+Fxhdo8TVW85SzLF6kEq0yuWuOTonlo0jeNa7diFHieOcY4R8UgdlnPglc/lXLLjlGd0/hNice+oZe8uPconkWCa5wLkEGHdOyL5c4t3KolKEbp/D1PJnMaAGwtCGyF5rleZ7XW2y3GlwEX+qtLTJUmvYR+AVKyiruDy6o8AxAPXf2Vz/Smzd7oG8CE2CaDBRXPgHqjtDLqY5E8wSVBjMppVI1TH9oMT7LG0D1aPdVxQHVaKnlFCkD4QAepcfuVFVyqi69PVJMeE2He9ljaA30FE6iEUq5LVExUDiZ0ggi3dyC4ulWYfFTd5jxD3CboxK7CgXUTmFMp42QpGYsLGISxyeyoQnurgpzGhK2MjoqFcT7JJAmDpyrGuFUa9OL1wdnXhNrUgqKoKic5yKAy2HpzHqoK1kYyPJKmIuPCybuP/aOZVZXwWsXYyk+bCSegBJ9gjGU5JiK4kAU28jUB1HyZv7rWZNltPDA6GgmLuN3HuTyVp+Ng7Dp1VkkvZzu/0B8LwXQ0zXJqO5mdI9AEXo5JhmABlGnA/wAQTb6qKpjI3jvf7JURIlr4P090fJfELrf0ssNJlgxo5Q1u/pFlICw//Hy6BRDFtbAIvvKifmYvFuh3+iPln0GElTB4dzY+Gwk8oA+qB5lwPhq4P9MMPVjz+kIqazak6tRdy0i3qFKyp8OA4ieXL6GxW8tN2jyPOf4aYmmC+npeATDdQ1kduRWExNFzXFrwWkbgiCF9RUnuduGzHOfvf6LN8VcK4bGt8ZaH8nNiR6pK4k/Rfj586o8ApwFPTcE/PMlqYSqadQczpdyc2dwqGlczR2zWroI1dHZViW9VWLUY4S4ddja4ZMU2+Ko7aGzsD1KMzrNVZ2w3wfwo/GHUHaKQMGodu4b1K9nynI6eGYG0rCLuMOc71UeQ0GU2NpUg1rGANAiZHburNYBpnWew+ceotHkuqZUo8/k5Xb/wPrViIA8pIJ+yd/MabHbaVVp4iDIN7i4jfmBuFFiMxYJDmk8yZufWEXRLAn/NNgGTP3KY2uQASR2iJ9ll3ZnLpbYHYg/QlEKON8pjc3U1ypjeOBapiWbOI7iPYJxe20ERvYfUrO181pUnf1JDYnWQSCTuD0SqZq17dYJdqG7Qdo5AxKn/AOlbi7YVBpKJDjqD7diICjdJcdi31PnsguTYwNAp/CIpx8znBz3OEXcNgEWq4qRLNMAfvdXmtXfsFTjBWd5M13jbLHAbBtnf7ggFGmNWlw0vHI8x1b1C2QcXHkbeI853sh+b5YKzRu1wJ0uEeE+fTsn0yf7AtTDhNDY5qKjUdJZUs9vs4cnBdeENHw4fNJVy0pIaHDI6Lp5Yo2lSPJhcbLoYWLoXC9S5bhXVqraTd38+gG5TpA0McNZIK51PMUwYJ5uPNrfzK9HoBjGhjQA0CAB09FDgcvp06baTWw0CAYuD1809mEeDFo6yJP6K6Xic1V5MmIjk6Ot49QN1TrsPYTsJ9lbhzBMgR62PQTdVsTjdxaTcEA8uxmPJCs+ioGPc/dwT/wCZOmVVqNqvJIqEubfQ4Q09RH57+YshOYZkKVVzZD4Pij8J5tPcLjq/Aso0OOxZG55KHDV9RubBBa2Mdo1hwMfhNtujv1VnJpqs1gObqmxERBi6Kt0weOILvxw52A6WlWsJiab92mwsQZPmSqVLLAdxPmrlDCFnymPt7FWl19FxF0VyIgN7X3873Vo1QfmqNjmGi3vyQ/CYdzhreZcTAgGw5TyFoVh2FBH9WoLbAQSFdNiMy38SsHSr0G+EAgjS6bgkxIBFwSRN14w+mWkgiCCQfMbr6Ko4ZxY/4rW1BBDbTYi86hEQvGM8y0CvUt+Ij28u0KXMt/sdf4tbsmacvZv4a5Iyjhm1Xh2t8uMAmNR8PLoAvK6mBXuHDOZt+DTcCXQ0N3gSIFh5ocOb2N+VqlIKnwk6Gu35CCI8go/jkkRT0k21GZP/ACrNTE2kvAI/CCZPaYsoKeKLvk0NHUm/qd1ZnCWWYafmDQNyJkn9UB4gy8VmOZSeKZncOgx67K1iKz3OAaWvHY7eh+6lFGrp+Rs9wCftFlOrh7LHWrtHnmPq18IQKul8zsDEiwMgnkrWW8QtLg2pDXHlPqi9TE1aVT4bqLXA3BdAdvtzBE81Ni8mFZnjFGmYluhuqD3dAt5e64lN0/6ov5y12iRpYWy+46byTsAOZTqGYMnS9jhfS0BpIb2HUnrshdDFQfg1NIqtuyTGroWug29EWwbXtAkAmI8JuO8u39lVN70KksC7W0Z3JPfb6/mn4T4briYk7iBa0wOXmmYTBOcDqLRMQPmd3JO3orrsI0bRq6/a09l1Tr+EWkhBjQLae/L7KCtUkgAC3dQ1SQZcTHURfyB3UNQOeJ+WTv8A8p9AAeLKVWfigAfDM7/h2Le/JD2YjU0OGxEo9nIOkjcFpHnbpO6yOSOmlH9rnN9jI+6X0y0vZL5rBJNNNJEJmWBOJVYVVI6uFy4V0a8ha7gDCNIdUsXE6RPKN7dP0WOmStZwHXOhw5/EIgcwAN/VV480nyb4m+ZqifiAFpsP0TTXNwZvzAH6KvSEGS11j5D0lT1qAd+GRu24Jv7hVZzkBzMAltQOI2BJt5SBb7IVmeMJLG4Mhzzc2DxHUvHyogcFWaQWgOgmCIBA5Neww13+6QfzbSY34rnOpGnVcBqHIwDBafxDfmo2m1j/AO/2VnF2jMZm7Huhnwm6nTDi4Q23+W3svPc/p1sO4scdL9zBkkuO8jr3Xu+sEeK4BnyI5hZHGcNh1QOdOIJLp+KGw5p1EB1vCQbAtgb+S5q4srd6LRyr0ecU+JLQ4Rb0t9lpuHc+Y2izxPcXuMMaXEm5AawbDl2F+aE8WcJAPa7Ctpgn5qJeJDpiAHHbfny7olwfhxh/FUpPq4gSNNNjnNYJhrQQ0NbykiYlbxS7TM+30j0zJqZ+E01Kekm8CXROwnrCv1MEx7YLJBtIJBv33HNR4HVo1OaWnoTf1hOq4qB0M2In2J/RdkJeKOV+xzsPYDUWBoAAA8PTcKA1WsvRpuqHYxpj/qcQJ8phPGK8g4W5yfaJVLEy2SMQ+kZktDWkFxuYBB0nry7SnAiLNM0EeIP1EWa17YvNiWyORgTeF5xiKOvE1geTh9vutNxFiAyk91R/9QjVJEF8ABpaQImzQIHILEZTiz8J1V58T3Eme1vvJ9VHlp+J1/jJeWoK45tFjYgSi/CGZxh2gEatT7ddMTPe4+i82zTNS50TzRzhvPDhKo1Na6m/xAOEhrojW2djv6FR4G12y35C8li+HreDc6o0FwBHeYHkiIp0QIEOkXBAJ9ByQHA5z8ZxAIJbytAsCD0iFfo0XzLYB8wAZ/tXWmecUcxyipq+Jhn1KR2c0EOaQOgIQ3Nq1djAXYxrSbAOYGOPUA3AK1DahJgHxDrcT2QniPIxiWbgVAZ3AJ672XH+R+Mr/tPspF57M7lGY0WEyaj31ILnPe3SI2vpmPMlWBntJzjTeKrWu8IeIc0k2I02dF9+fQJuUcLik7U+t4Y+UgR6lPq5vhaTyDqBb8p0iCeYbcxMb87rnmeSMVUkiruX8G51wjWrtpOw9aH03Ahz6dQSByJAPdajJcvrNa01oLgDJExJIsAQDHmOSCcL8VPrgyyDy8Ugi3W4iQtVRxhG4MdbmfddvF40tTJVTH4qq6nuN/r67qg3MIl0CTseiWJxBg6oMi2x94NkJxNF4EwYKeqa9CIJnHMO88729vuq2Jzi8NmB1QuSOSm+FpFxBPIxJWVVQcRSzrNQWGWy6/nfaO6A8MYhhpuBdc1HGPWB9lHxljvhs0g3cIYJBgGxd2m/1WcwGAfTOpp8+61XlHTw8TqT0DW3qkgtGsdIndJU8kD+K/0ZilReVM2iRuitCm1dqNELnTX0Zp/CiWlomES4JzJ9LEGm4ACoC4ExaNwDvfoqT8e287NWVxWdOdWa9pjSZaehGxWmu9Rfk4p8M+nvjcUJ3JO+4hWaePm0DtMn2JWC4T4gZXdpcYqQbQfU9/RbOiaYuHGR2+t1dNvtHmtY8YRGIvBIb63PZMxJa+4LpAkWkW5DnCgpOYbxt1sffqrdKrSA2PYg3R9gAGZ1MTomiy55m+kbTp391Hk3D1Wp4q9R2kSY0gucT+InlFgBC0oxA5EnuXH6iwUrK4IgEW6Tb15KL4Jp7T3/AAP5vMwdSimAGiAPqf1Un80eoI84P5Kt/M2gnUOcOvHS1k19anuCOpAbf3Pqrrr0IS1HSZAIJtuLf/UpoLm/MSe4lx9lSfjWDYuv6DyjmoKuZNHiaNJAibOB/RDUYsV8Qx9nGI20tE+vMIXmuYBv9lQARJm3mTceiH5tnjWAuOhp5naF5txNxYakspGx3d7i3pz7oOhplsdxZnJr1fgUpILgImQXmwHkJ/cK5m+ALaQazkAJ2mBus9wZS1Ypp/ta530j/uXob2Tupvs9DhnEYHL8lLnS4I9nGWg0JG9PxDy/EPa/ojzMOBsE6pRDgWnYgj3EJfHoriAfCXFRot+FUgtmxJu0TcdxzXpmAzVtRoLXNLI3de3PyPkvn1hLHupu3Y4t9jCKZZnVbDn+k7wndpu0+n6QtPI56ZycnEq7k97o4kSSxjWzzE+4J29E6rR1AEiXHlPLrPMrznI+PqZhtT+m6RvdnoeXqtPTzplSCHyDckOlpVk00crlr2HRRAlpZqJEQDy6RsgeZcBUKsODqrXWhltAvzJEx2lXaOaaBDSIN/8AIk81O7MyI1Ek/wC7mhURXtA1g7hbherQrVHODQ0QG/NBG8iN9h5LS4um64bbrFx6IY7NybfIOx+4VZ+bA+EGB6X9FoiYWIzbZYGElxk3naYnyBTK0TJkD+0XFu5VCpjabGkuJv0cLeiB4/iKmwR8S3PUPX9wtiQUm/RpnYkdIAG0QNu3NZ7P+IxSZrL2wbNaANThtMj5R33PvGOzfjTVIpSTf/FgH+0b+pKyeLxj6ri6o4uceZQrk/RaOL7RYzXMnVqhe43O3Yf+oRTIs6DYa82QSrhiBdVi2FHDsl+J6g3ENi0QksDh80cGgSbLqOlPKTT4bFEclUx+IrVTpY3SOqI4DRpvvKg4ixgo0vD8xsEle+heKEp2jMZtXDB8Jpk/iKEBqcZJk7lT0aXMp0sEp+T0KYbD16DG14gTDXeY5rWZTxwNOnEAh1hqG2/uh1PMhUwxou2i3mNvqsu4cikVtCVxq12exYfNWPLQ1zXAjVIPKJVuvjLw0yf3ZeNYbNK1MaadQgb6eXuL/VEKfGWIbY2E3jf3N1ZWmc1cNI9bo1S6APVWA+BYzHuvLTxy+nIcQ82AIk2HeYTnfxAbBimQSPqm6RPwZ6dUx7W/Kb/vmqVTMQPEXeInmfyXmGI47eR4acHuUKxnFOIqbEN8v+ZQbCuNnq2Mz8C7yIHW0LLZrxkwfKdZ6Db3Xn2IxdSpd73O8yokGyi4/wBhLNc4q1/nd4eTRt69UNJSKaUCmYaz+HtGX1X9GhvuZ/JbdZbgOiRQc7+55+gA/VaYBE6YWSiQN7roaTtdMkczAVXFcWUKPhZc9UtWpG0wvG2DNHFF0QKgD/XZ32+qH06kiQi3GudDFCm6LsJHof8A0s7h6kIP+06Qb8aCEg7pU3OaZY8t8iR9kwOSJU1qGaTCuF4hxNMyKhJ2BN4HqFbZxliAQXBpjlEe91nSe6aXFMqYjif0aOrxtiDyaPQ/+SqVeKcQ78UeQA/JAy5MLk3Yvil8CFbN6zpl5v1JP32VR7ybuJPmodS7KOBH6lbyrDfFqtbymT5C6ohavgzCWfUP+0elz++yyQ0rWPx+E7IFicOtzVog7oLjMMNgE7RVmU0pIlUwsEpJAeIZwGp752aNh1VXinEtqODR+HdEsTV+FTJG8LJ6i4knmootazoZToyURbQ8JSwVHmUQ0yFRCqQPltFxfuYlXc6wmhwcNnfcIngcOAVNmeH10y0bi48wlfY3hk4ZJzkxxTioygjnYwjsPZMJTyUwlUQjGFcXSU2Uwp2V1NlJEx0lNJSlcWAz0bhSnpwtPvLvcohmBqaCaTSXdAoMuYWUmNjZoH0WdzzOa9GrAcQOULM6H1JbxnEBfSNGoDTqA3Oyx2Lqw4gXV3E5g/EEao1dea4MqcSgkvpLt+gaahdyTWFajAZHPzLN4iloe5p5EhMgVLXZNSepZVRqlDlNyFMkKaSuatu64SgkY4U0pSuSnwUS6uLqxhwXo+UYT4dFjegk+ZuVhckwnxazW8pk+Q/YXobKJaPmRRbjX0jqhUq9GVfqNUOhMUAb6JlJGnYInkkhgANnFTVTt1QOlTRrMLMHmqFCmZXMizRbotgKwxqkqYSGhP8A9ZZQaJZfqnbwVvFpLh6JiYPsp2tKEVONzNmCO6v4XMDVGrTE9EMZo5FRnM9wpp1T0d4h+Y/fVDS5a7PsN8SlP4m3HlzWQcEUS5JxjHOUbnJzh9Qo+nsqJEGcJTSVxcTYIPBSlcC6sESnwNPVUaOrh91CiXDzJrsnYXWCl2eg6gB6LDcTy6pdbJ1ToEHzDBB52WOilqwz2QYX+pK17afZVMuwIaimhY0ziw7RCxHE1DTiHRs6627R3Wd4ww0hrxysVgWtRlwnhcaupWRwQ5LhNj5ro5Jp2QMIri6U1MA6E4JoTwEGFI1XBeHjVUjfwj81qHPlCspZ8Ok1va/mVcFRE6UsRK9MNVrLuSa9U87pOdSOnfcImGVs3fJ0tEckljCK/wDkkhrF/kX6NLmQkDpKr4dh1WV9zdYc3mLj0UeEs4LmXs6vaLVSrLL7hZjNqpcYWkxLLEoLVwkuVmyLWrAZQwUxZa7LqehgEKrgsKByRJqTWx5hSdffdY/M8NoeRy3C1rzCz+dDV5rA5FqAT/sVC781M5RkfoqycdEThcricU1MJglPSpCJJ+20xcnv9lAp6dUAQR9Aec3HnPuigPfh11HobdTbnEHvKM8OQwlzudtpAE80GGIg2B94O8meXojOWHUI2B38ug6I4gw600LcaBv/AJbAmA0kSUjXaf8Aq0+sT9rqBlAi7XQTM2mxcXW7iSntonWXQY0wJi7ogu9oCHRfaH0sW3e4kSJBEiQJHW5HurD8S0GDMyBABNyJA9gqtPBktaHOuGACw8J8Jv1+UBTNw51BznSdWraBZhZG/dboyd/ok/nWRNzYkw0kgAwdQ5XB9ihWbYvW1zSLSRtbtfqr38sRJa+J1TabFznCOhGooTmbYm+5J90egPzM62kfrG/PonfCP5946wlUcBykTIv+7WXG1+14j08kuIltDvgntvG436eahP5qX4v/AOtX/CiP5pevgVv0aUkimyiYcrWXAaxOwVEv6KxgzBC2GTNzQMhTodl77BFqSx0pnGVUq9aQApS0BUag1VAOiDeDZpYGGHRJWm0rJJtFwzuBcR4jz+xU43B6FJJcr9nTIQrUBpMcwhRZN11JWomi7hqdlNpSSSDFbEvhAMYZKSSwtA+rSlVajEkk0shcojcEwhJJVRzs4VI2iTdJJango/4YG+6MZSEkkPhXjXZpMPBF1NoSSWOnBNYpC1JJYxHW2QTH3lJJZgwAVmXURppJJNJNIYWJNpuOySSbRGiKqwgwd10UUkkzeCzKY9tBW6FJo3N+SSSVPXg6SQby4Ts4/VGaDD/cUkltLSkT/DP9x6/fv5eyZl+FL3udqO/75pJIJ9j4sC+ySSSYx//Z">
+    <div class="content">
+    <h3>Chatti Di Lassi</h3>
+    <p>₹80</p>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="about" id="about">
+    <div class="about-us">
+        <h2>About Us</h2>
+    <div class="about-content">
+        <p>Haveli celebrates the rich culture of Punjab with authentic flavors, traditional ambiance, and heartfelt hospitality, offering a truly memorable desi dining experience.</p>
+       </div>
+    </div>
+    </section>
+
+    <section class="cont" id="contact">
+        <h2>Contact Us</h2>
+    <div class="contact-info">
+        <p>📍 Location:<a href="https://www.google.com/maps/place/Haveli/@31.2781641,75.676673,17z/data=!3m1!4b1!4m6!3m5!1s0x391a58d254051053:0x79a3b83ecfe44040!8m2!3d31.2781641!4d75.676673!16s%2Fg%2F1td40wqh?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank"> Jalandhar, Punjab, India</a></p>
+        <p>📞 Phone: +91 98145-99000</p>
+        <p>✉️ Email:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@haveli.com" target="_blank"> md.office@haveli.co. </a></p>
+    </div>
+    </div>
+    </section>
+    
+    <footer>
+        <p>© 2026 Haveli. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
