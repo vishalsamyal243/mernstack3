@@ -47,15 +47,6 @@
 
 // ---------------------------------------------------------------------------
  
-// console.log("Hello Vishal Samyal");
-// console.log("Hello coder roots");
 
-// -------------------------------Vaiables in javascript-------------------------------------
 
-fullName = "Tony Stark";
-age = 24
-x = null; // null ka mtlb pta hai iske ander kya hai pr 
-y = undefined;
-console.log(fullName);
-console.log(age);
-console.log(x);
+
