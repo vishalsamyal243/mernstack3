@@ -1,4 +1,4 @@
-console.log("hello coder roots")
+// console.log("hello coder roots")
 
 // var a
 // a = 10
@@ -44,4 +44,18 @@ console.log("hello coder roots")
 //     console.log("Hello, World!")
 // }
 // // greet3() // This line would also cause an error because greet3 is a function expression and is not hoisted
+
+// ---------------------------------------------------------------------------
  
+// console.log("Hello Vishal Samyal");
+// console.log("Hello coder roots");
+
+// -------------------------------Vaiables in javascript-------------------------------------
+
+fullName = "Tony Stark";
+age = 24
+x = null; // null ka mtlb pta hai iske ander kya hai pr 
+y = undefined;
+console.log(fullName);
+console.log(age);
+console.log(x);
