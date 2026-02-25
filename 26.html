@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midnight Cat</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:0.6s ease;
+}
+
+body.light{
+    background:linear-gradient(135deg,#e0f7fa,#ffffff);
+    color:#222;
+}
+
+body.dark{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+}
+
+h1{
+    margin-bottom:30px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    animation:titleFloat 3s ease-in-out infinite;
+}
+
+@keyframes titleFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+}
+
+body.dark h1{
+    color:#00ffcc;
+    animation:titleFloat 3s ease-in-out infinite,
+              titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow{
+    from{ text-shadow:0 0 10px #00ffcc; }
+    to{ text-shadow:0 0 40px #00ffcc, 0 0 80px #00ffcc; }
+}
+
+.cat{
+    position:relative;
+    width:180px;
+    height:150px;
+}
+
+.head{
+    width:150px;
+    height:130px;
+    background:#2f2f2f;
+    border-radius:50%;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.ear{
+    width:0;
+    height:0;
+    border-left:25px solid transparent;
+    border-right:25px solid transparent;
+    border-bottom:50px solid #2f2f2f;
+    position:absolute;
+    top:-35px;
+}
+
+.ear.left{ left:10px; transform:rotate(-15deg);}
+.ear.right{ right:10px; transform:rotate(15deg);}
+
+.eyes{
+    position:absolute;
+    top:45px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+}
+
+.eye{
+    width:32px;
+    height:24px;
+    background:white;
+    border-radius:50%;
+    position:relative;
+    overflow:hidden;
+    border:2px solid #222;
+    animation:blink 5s infinite;
+}
+
+.pupil{
+    width:14px;
+    height:14px;
+    background:radial-gradient(circle, #ffe600 40%, #c9a400 80%);
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+@keyframes blink{
+    0%, 92%, 100% { height:24px; }
+    95% { height:2px; }
+}
+
+body.dark .eye{
+    background:#ffe600;
+    border:none;
+    box-shadow:0 0 15px #ffe600,
+               0 0 30px #ffcc00,
+               0 0 50px #ffaa00;
+    animation:blink 5s infinite,
+              eyeGlow 1.5s infinite alternate;
+}
+
+body.dark .pupil{
+    width:6px;
+    height:22px;
+    background:black;
+}
+
+@keyframes eyeGlow{
+    from{ box-shadow:0 0 10px #ffe600; }
+    to{ box-shadow:0 0 40px #ffaa00; }
+}
+
+.bulb{
+    font-size:70px;
+    margin-bottom:40px;
+}
+
+body.dark .bulb{ color:#555; }
+
+body.light .bulb{
+    color:#ffd700;
+    text-shadow:0 0 20px #ffd700;
+}
+
+.controls{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+}
+
+button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.on{
+    background:#27ae60;
+    color:white;
+}
+
+.off{
+    background:#c0392b;
+    color:white;
+}
+
+.on:hover{
+    background:#2ecc71;
+    color:#000;
+    box-shadow:0 0 15px #2ecc71,
+               0 0 30px #2ecc71;
+    transform:translateY(-5px) scale(1.05);
+}
+
+.off:hover{
+    background:#e74c3c;
+    box-shadow:0 0 15px #e74c3c,
+               0 0 30px #e74c3c;
+    transform:translateY(-5px) scale(1.05);
+}
+
+button:active{
+    transform:scale(0.95);
+}
+
+.status{
+    margin-top:20px;
+    font-weight:500;
+    letter-spacing:1px;
+}
+</style>
+</head>
+
+<body class="light">
+
+<h1>Midnight Cat</h1>
+
+<i class="fa-solid fa-lightbulb bulb"></i>
+
+<div class="cat">
+    <div class="head">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="eyes">
+            <div class="eye"><div class="pupil"></div></div>
+            <div class="eye"><div class="pupil"></div></div>
+        </div>
+    </div>
+</div>
+
+<div class="controls">
+    <button class="on" onclick="turnOn()">Lights On</button>
+    <button class="off" onclick="turnOff()">Lights Off</button>
+</div>
+
+<div class="status" id="status">Lights are ON</div>
+
+<script>
+const body=document.body;
+const status=document.getElementById("status");
+
+function turnOn(){
+    body.classList.remove("dark");
+    body.classList.add("light");
+    status.textContent="Lights are ON – Cat eyes are open.";
+}
+
+function turnOff(){
+    body.classList.remove("light");
+    body.classList.add("dark");
+    status.textContent="Lights are OFF – Panther eyes glowing!";
+}
+</script>
+
+</body>
+</html>
