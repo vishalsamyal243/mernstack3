@@ -90,16 +90,23 @@
 
 //Non-primitive data types in javascript
 
-const student = {
-    fullName : "Vishal Samyal",
-    age : 20,
-    cgpa : 8.2,
-    isPass : true,
+// const student = {
+//     fullName : "Vishal Samyal",
+//     age : 20,
+//     cgpa : 8.2,
+//     isPass : true,
+// }
+
+// student["age"] = student["age"] + 1
+// student["fullName"] = "Yuvraj Rai"
+
+// console.log(student["age"])
+// console.log(student.fullName)
+// console.log(typeof student)
+
+//------------------------------------Hoisting------------------------------------------
+
+greet()  //hosting ka mtlb hai ki 
+function greet(){
+    console.log("Good Morning") 
 }
-
-student["age"] = student["age"] + 1
-student["fullName"] = "Yuvraj Rai"
-
-console.log(student["age"])
-console.log(student.fullName)
-console.log(typeof student)

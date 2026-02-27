@@ -123,14 +123,14 @@ body.dark h1{
     95% { height:2px; }
 }
 
+
 body.dark .eye{
     background:#ffe600;
     border:none;
     box-shadow:0 0 15px #ffe600,
                0 0 30px #ffcc00,
                0 0 50px #ffaa00;
-    animation:blink 5s infinite,
-              eyeGlow 1.5s infinite alternate;
+    animation:eyeGlow 1.5s infinite alternate;
 }
 
 body.dark .pupil{
@@ -144,6 +144,16 @@ body.dark .pupil{
     to{ box-shadow:0 0 40px #ffaa00; }
 }
 
+
+body.dark .head{
+    background:transparent;
+}
+
+body.dark .ear{
+    border-bottom-color:transparent;
+}
+
+
 .bulb{
     font-size:70px;
     margin-bottom:40px;
@@ -155,6 +165,7 @@ body.light .bulb{
     color:#ffd700;
     text-shadow:0 0 20px #ffd700;
 }
+
 
 .controls{
     margin-top:40px;
@@ -246,7 +257,7 @@ function turnOn(){
 function turnOff(){
     body.classList.remove("light");
     body.classList.add("dark");
-    status.textContent="Lights are OFF – Panther eyes glowing!";
+    status.textContent="Lights are OFF – Only glowing eyes visible!";
 }
 </script>
 
