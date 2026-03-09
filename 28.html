@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb Defuser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #111;
+            color: white;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+        }
+        #status {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .safe {
+            color: lime;
+        }
+        .blast {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💣 Bomb Defuser</h1>
+    <p>Type the exact keyword <b>defuse</b> to stop the bomb!</p>
+
+    <input type="text" id="codeInput" placeholder="Enter code here" />
+
+    <div id="status" class="blast">💥 Bomb Blast!</div>
+
+    <script>
+        const input = document.getElementById("codeInput");
+        const status = document.getElementById("status");
+
+        // Check every 500 milliseconds
+        setInterval(function() {
+            if (input.value === "defuse") {
+                status.textContent = "✅ Bomb Defused!";
+                status.className = "safe";
+            } else {
+                status.textContent = "💥 Bomb Blast!";
+                status.className = "blast";
+            }
+        }, 500);
+    </script>
+
+</body>
+</html>

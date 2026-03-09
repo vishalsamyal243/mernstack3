@@ -105,8 +105,82 @@
 // console.log(typeof student)
 
 //------------------------------------Hoisting------------------------------------------
+//Folowing two lines will run successfully due to Javascript hoisting
 
-greet()  //hosting ka mtlb hai ki 
-function greet(){
-    console.log("Good Morning") 
-}
+// console.log(a)
+// greet()  
+
+// function greet(){
+//     console.log("Good Morning") 
+// }
+
+//  var a = 9; // Declaration hoisted to the top but initialization is not
+//  console.log(a)
+
+//---------------------------------------let and const-----------------------------------
+
+// console.log(a) 
+// greet()  
+
+// function greet(){
+//     console.log("Good Morning") 
+// }
+
+//  let a = 9; 
+// //  const a = 9;
+//  console.log(a)
+
+//----------------------------Function expressionss and class expression are not hoisted--------------------------------
+
+// greet()
+// const greet = () => {
+//     console.log("Good Morning")
+// }
+
+// greet()
+// var greet = () => {                  //arrow function
+//     console.log("Good Morning")
+// }
+
+// greet()
+// var greet = function() {            //function expression
+//     console.log("Good Morning")
+// }
+
+//--------------------------------------Function Declaration---------------------------------
+// greet()
+
+// function greet() {           //in function declaration we can call anywhere
+//     console.log("Vishal Samyal")
+// }
+
+//-------------------------------------Function Expression-----------------------------------
+// greet()
+
+// const greet = function () {   //if we are using function expression we have to call at the bottom 
+//     console.log("Vishal Samyal")
+// }
+
+// greet()
+
+//--------------------------------------Arrow Function--------------------------------------
+
+// const sayHello = (name, greeting) => console.log(greeting + " " + name)    //also write this in one line
+
+// const x = {
+//     name: "Vishal",
+//     role: "Mern Stack Developer",
+//     exp: 30,
+//     show: function() {
+//         // let that = this
+//         //  console.log(this)
+//         setTimeout(() => {  
+//         console.log(`The name is ${this.name}\nThe role is ${this.role}`)  
+//         }, 2000)
+//     }
+// }
+// sayHello("Vishal", "Good Afternoon")
+// console.log(x.name, x.exp)
+// x.show()
+
+

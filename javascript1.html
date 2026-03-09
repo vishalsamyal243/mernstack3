@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Element Find Method</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: black;
+        }
+    </style>
+
+    <!-- function to change the content of the paragraph with id "p1" when the button is clicked -->
+
+    <!-- <script>
+    function myName(){
+        document.getElementById("p1").innerHTML = "Hello Vishal"
+    }
+</script> -->
+
+</head>
+<body>
+
+    <!-- innerHTML ki help se  hum html content change karsakte hain -->
+
+    <!-- <h1 id="p1"></h1>
+
+    <script>
+        document.getElementById("p1").innerHTML = "<i>MERN Stack Developer</i>"
+    </script> -->
+
+    <!-- innerText ka use krte hain taki text content change ho isse hum html content change nahi karsakte -->
+
+     <!-- <h1 id="p1"></h1>
+
+    <script>
+        document.getElementById("p1").innerText = "MERN Stack Developer"
+    </script> -->
+
+    <!-- button to trigger the function -->
+
+    <!-- <h1>Welcome to My Website</h1>
+
+    <p id="p1">This is a paragraph</p>
+    <button type="btn" onclick="myName()">Click Me</button> -->
+
+    <!-- document.getElementById() method is used to find an element by its id attribute. -->
+
+    <!-- <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        var a=10,b=30
+        var c;
+        var sum;
+        c=a+b;
+        sum="The sum of a and b is :"+c;
+        document.getElementById("p1").innerHTML = 'Hello, World!'; //also use double quotes for string
+        document.getElementById("p2").innerHTML = sum; 
+    </script> -->
+
+    <!-- document.getElementsByTagName() method is used to find elements by their tag name. -->
+
+    <!-- <p>Vishal Samyal</p>
+    <p>MERN Stack Developer</p>
+    <p id="p3"></p>
+    <script>
+    var msg = document.getElementsByTagName("p");
+    document.getElementById("p3").innerHTML=msg[0].innerHTML
+    + " is working as a " + msg[1].innerHTML; 
+    </script> -->
+     
+    <!-- document.getElementsByClassName() method is used to find elements by their class name. -->
+
+    <!-- <p class="PI">Vishal Samyal</p>
+    <p class="PI">MERN Stack Developer</p>
+    <p class="Contact">8219887113</p>
+    <p class="Contact">Indora</p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <script>
+        var inf1 = document.getElementsByClassName("PI")
+        var inf2 = document.getElementsByClassName("Contact")
+        document.getElementById("p4").innerHTML="Name :" + inf1[0].innerHTML + "<br>" + "Profession :" + inf1[1].innerHTML
+         document.getElementById("p5").innerHTML="Mobile :" + inf2[0].innerHTML + "<br>" + "City :" + inf2[1].innerHTML
+
+    </script> -->
+
+    <!-- it is used to link an external JavaScript file to the HTML document
+    <script src="second.js"></script> -->
+
+    <!-- document.write() method is used to write content directly to the HTML document -->
+
+    <!-- <h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<button type="button" onclick="document.write(5 + 6)">Try it</button> --> 
+
+<!-- it is used to display an alert box with a message and an OK button -->
+
+<!-- <button type="button" onclick="alert(7+2)">Click me</button>   -->
+
+<!-- it is used to write content to the browser's console -->
+<!-- <script>
+console.log(3+2)
+</script>
+     -->
+
+<!-- window.alert ka use hum alert box ke liye karte hain -->
+ <!-- window.alert me window ka use kre to b output same rahegi kyunki window global scope object hai -->
+
+<!-- <h1>My first web page</h1>
+<p>This is a paragraph</p>
+
+    <script>
+        window.alert(5+6)
+    </script> -->
+
+    <!-- console.log ka use hum browser ke console me output dikhane ke liye karte hain -->
+
+    <!-- <script>
+        console.log(5+6)
+    </script> -->
+<!-- window.print() ka use hum page print karne ke liye karte hain
+
+    <button onclick="window.print()">Print Page</button> -->
+
+    <!-- JavaScript can changes HTML Atrribute Values -->
+
+    <!-- <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">turn on light</button>
+    <img id="myImage"src="https://www.w3schools.com/js/pic_bulboff.gif"style="width:100px">
+    <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">turn off light</button> -->
+
+    <!-- JavaScript can change HTML Styles(CSS) -->
+
+    <!-- <h1 id="p1">My name is vishal samyal</h1>
+
+    <script>
+        document.getElementById("p1").style.color="red"
+        document.getElementById("p1").style.fontSize="50px"
+        document.getElementById("p1").style.fontFamily="Arial"
+        document.getElementById("p1").style.backgroundColor="yellow"
+    </script> -->
+
+    <!-- JavaScript can hide HTML Elements -->
+
+    <!-- <h1 id="p1">My name is vishal samyal</h1>
+
+    <button onclick="document.getElementById('p1').style.display='none'">Hide Text</button> -->
+
+    <!-- JavaScript can show HTML Elements -->
+
+    <!-- <p id="demo" style="display:none">Hello JavaScript!</p>
+
+    <button onclick="document.getElementById('demo').style.display='block'">Click Me!</button> -->
+
+    <!-- CreateElement method in DOM -->
+
+    <!-- <p id="p1"></p>
+    <script>
+        let h = document.createElement("p")
+        h.innerHTML = "Vishal"
+        document.getElementById("p1").appendChild(h)
+    </script> -->
+
+   <!-- <div id="p2"></div>
+
+   <script>
+    let btn = document.createElement("button")
+    btn.innerHTML = "Click Me"
+    document.getElementById("p2").appendChild(btn)
+   </script> -->
+
+   <!-- This is a example of add new text in same line -->
+
+   <!-- <h1 id="box">I am Android Developer</h1>
+
+   <button onclick="addRole()">Click Me</button>
+
+   <script>
+    function addRole(){
+        document.getElementById("box").innerHTML += "MERN Stack Developer"
+    }
+   </script>
+     -->
+
+     <!-- <h1 id="bo">Hello</h1>
+
+     <button onclick="addRol()">Click me</button>
+
+        <script>
+            function addRol(){
+               let text = document.createTextNode("Vishal Samyal")
+               document.getElementById("bo").appendChild(text)
+            }
+            </script> -->
+
+    <!-- RemoveElement Method -->
+
+    <!-- <h1 id="r1">
+        <p id="p1">Hello Vishal Samyal</p>
+    </h1>
+
+    <button onclick="RemoveItem()">Remove</button>
+
+    <script>
+        function RemoveItem(){
+            let me = document.getElementById("r1")
+            // let child = document.getElementById("r1").childNodes[0]
+            let child = document.getElementById("p1")
+            me.removeChild(child)
+        }
+    </script> -->
+
+    <!-- ReplaceChild() Method -->
+
+    <!-- <h1 id="p2">
+        <p id="p1">Hello Vishal Samyal</p>
+        <p id="p3">Hy Tamish</p>
+    </h1>
+
+    <button onclick="ReplaceItem()">Replace Item</button>
+
+    <script>
+        function ReplaceItem(){
+            let parent = document.getElementById("p2")
+            let child = document.getElementById("p3")
+            let newChild = document.createElement("p")
+            newChild.innerHTML = "Hello Vishal Samyal, Welcome to MERN Stack Development"
+            parent.replaceChild(newChild, child)
+        }
+    </script> -->
+
+    <!-- Toggle Class -->
+
+    <!-- <div id="box" class="box">Vishal Samyal</div>
+
+    <button onclick="myFunction()">Toggle</button>
+    
+
+    <script>
+        function myFunction(){
+            var element = document.getElementById("box")
+            element.classList.toggle("box")
+        }
+    </script> -->
+
+    <!-- Events in Javscript -->
+
+    <!-- <h1 id="2">Hello Vishal Samyal</h1>
+
+    <script>
+        document.getElementById("2").addEventListener("click", function(){
+            alert("I am Clicked")
+        })
+    </script> -->
+
+    <!-- Clicked Event -->
+
+    <!-- <button id="btn">Click Me</button>
+
+    <script>
+        const btn = document.getElementById("btn")
+        btn.addEventListener("click", function(){
+            alert("Button was Clicked")
+        })
+    </script> -->
+
+    <!-- Mouseover and Mouseout Events -->
+
+    <!-- <div id="box" style="width:200px; height:200px;background-color: yellow;">Hover me</div>
+
+    <script>
+        document.getElementById("box").addEventListener("mouseover", function(){
+            box.style.background = "lightgreen"
+            box.style.color = "red"
+             })
+
+        const box = document.getElementById("box")
+        box.addEventListener("mouseout", function(){
+            box.style.background = "yellow"
+            box.style.color = "black"
+        }) 
+            </script>  -->
+
+        <!-- double Click Event -->
+
+        <!-- <img src="https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg" 
+        alt="Lion" id="Animal1" style="width:200px;height:200px">
+
+        <script>
+            let animal = document.getElementById("Animal1")
+
+            animal.addEventListener("dblclick",function(){
+            animal.src="https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg"
+            })
+        </script> -->
+
+       <!-- Keyboard Events -->
+
+       <!-- <input type="text" id="box" placeholder="Type something">
+
+       <script>
+        let box = document.getElementById("box")
+        box.addEventListener("keyup", function(){  //keydown and keypress(old) 
+            box.style.background = "lightblue"
+        })
+       </script> -->
+
+       <!-- Form Event -->
+
+       <!-- <form id="form">
+        <input type="text" placeholder="Enter name">
+        <button type="submit">Submit</button>
+       </form>
+
+       <script>
+        const form = document.getElementById("form")
+        form.addEventListener("submit", function(event){
+            event.preventDefault()
+            console.log("Form Submitted")
+        } )
+       </script> -->
+
+       <!-- event.key -->
+
+       <!-- <input type="text" id="box" placeholder="Type something">
+
+       <script>
+       document.getElementById("box").addEventListener("keydown", function(event){
+    console.log(event.key);
+     });
+     </script> -->
+
+     <!-- event.target -->
+
+     <!-- <button id="btn">Click me</button>
+
+    <script>
+     document.getElementById("btn").addEventListener("click", function(event){
+    console.log(event.target);
+    });
+    </script> -->
+
+    <!-- Input Event -->
+
+    <!-- <input type="text" id="input">
+
+    <script>
+     const inp = document.getElementById("input")
+     inp.addEventListener("input" ,function(){
+        console.log("Current value: " + inp.value)
+     })
+    </script> -->
+
+    <!-- load Event -->
+
+    <!-- <script>
+    window.addEventListener("load", function() {
+    alert("Page loaded successfully");
+});
+</script> -->
+
+    <!-- focus event -->
+
+    <!-- <input type="text" id="name">
+
+    <script>
+        const input = document.getElementById("name")
+        input.addEventListener("focus", function(){
+            console.log("Input field focused")
+        })
+    </script> -->
+
+    <!-- blur event -->
+
+    <!-- <input type="text" id="name">
+
+    <script>
+        const input = document.getElementById("name")
+        input.addEventListener("blur", function(){
+            console.log("Input lost focus")
+        })
+    </script> -->
+
+    <!-- change event -->
+
+    <!-- <input type="text" id="nam">
+
+    <script>
+        const user = document.getElementById("nam")
+        user.addEventListener("change", function(){
+            console.log("value change:", user.value)
+        })
+    </script> -->
+
+    <!-- Event Type -->
+
+    <!-- <button id="btn">Click Me</button>
+
+    <script>
+        const btn = document.getElementById("btn")
+        btn.addEventListener("click", function(){
+            console.log(event.type)
+        })
+    </script> -->
+
+    <!-- Prevent Default :- browser ke action ko stop krna --> 
+
+    <!-- <a href="https://google.com" id="link">Go to Google</a>
+    <script>
+    document.getElementById("link").addEventListener("click", function(event){
+    event.preventDefault();
+    console.log("Link click prevented");
+    });
+    </script> -->
+
+    <!-- Stop Propagation -->
+
+    <!-- <div id="parent">
+        <button id="child">Click</button>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener("click", function(){
+            console.log("Parent Clicked")
+        })
+
+        document.getElementById("child").addEventListener("click", function(){
+            console.log("Child Clicked")
+            event.stopPropagation()
+        })
+    </script> -->
+
+    <!-- Event Bubbling -->
+
+     <div id="parent">
+        <button id="child">Click</button>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener("click", function(){
+            console.log("Parent Clicked")
+        })
+
+        document.getElementById("child").addEventListener("click", function(){
+            console.log("Child Clicked")
+        })
+    </script>
+
+    </body>
+    </html>
+
+    
